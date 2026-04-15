@@ -1,0 +1,13 @@
+{
+  "name": "bob-control",
+  "version": "1.0.0",
+  "description": "BOB Control — remote Android phone control via cloud relay. Screenshots, UI tree, tap, swipe, type, app and notification management.",
+  "author": "Bob Tools",
+  "homepage": "https://bob.tools",
+  "mcpServers": {
+    "bob-control": {
+      "type": "http",
+      "url": "https://api.bob.tools/mcp-control"
+    }
+  }
+}

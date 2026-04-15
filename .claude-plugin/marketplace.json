@@ -1,0 +1,50 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "BOB Tools Plugins",
+  "description": "Official plugins for BOB Tools — AI-powered forms, data management, currency rates, and phone control",
+  "owner": {
+    "name": "Bob Tools",
+    "email": "support@bob.tools"
+  },
+  "plugins": [
+    {
+      "name": "bob-tools",
+      "description": "Manage files, records, fields, views, dashboards, shares, integrations, and Telegram chats via BOB Tools MCP server. Supports 70+ tools for full data management.",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": {
+        "name": "Bob Tools",
+        "email": "support@bob.tools"
+      },
+      "source": "./plugins/bob-tools",
+      "homepage": "https://bob.tools",
+      "keywords": ["forms", "data", "spreadsheet", "crm", "ai", "records", "files", "telegram"]
+    },
+    {
+      "name": "bob-currency",
+      "description": "Access current and historical currency exchange rates for 178+ currencies. No authentication required.",
+      "category": "math",
+      "version": "1.0.0",
+      "author": {
+        "name": "Bob Tools",
+        "email": "support@bob.tools"
+      },
+      "source": "./plugins/bob-currency",
+      "homepage": "https://bob.tools",
+      "keywords": ["currency", "exchange", "rates", "finance", "money"]
+    },
+    {
+      "name": "bob-control",
+      "description": "Remote phone control via cloud relay — screenshots, UI tree, tap, swipe, type, app management, notifications. Requires BOB Control Android app.",
+      "category": "automation",
+      "version": "1.0.0",
+      "author": {
+        "name": "Bob Tools",
+        "email": "support@bob.tools"
+      },
+      "source": "./plugins/bob-control",
+      "homepage": "https://bob.tools",
+      "keywords": ["phone", "android", "remote", "control", "automation", "testing"]
+    }
+  ]
+}

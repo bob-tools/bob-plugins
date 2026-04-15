@@ -1,0 +1,13 @@
+{
+  "name": "bob-tools",
+  "version": "1.0.0",
+  "description": "BOB Tools — AI-powered forms and data management. Manage files, records, fields, views, dashboards, shares, integrations, and Telegram chats.",
+  "author": "Bob Tools",
+  "homepage": "https://bob.tools",
+  "mcpServers": {
+    "bob-tools": {
+      "type": "http",
+      "url": "https://api.bob.tools/mcp"
+    }
+  }
+}
