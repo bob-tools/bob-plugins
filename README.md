@@ -1,8 +1,10 @@
-# BOB Tools — Claude Code Plugin Marketplace
+# BOB Tools — Plugin Marketplace
 
 Official plugin marketplace for [BOB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, and Telegram control.
 
-## Quick Start
+Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** (`.agents/plugins/marketplace.json`) from the same repo.
+
+## Quick Start (Claude Code)
 
 ### 1. Add the marketplace
 
@@ -22,6 +24,24 @@ Official plugin marketplace for [BOB Tools](https://bob.tools) — AI-powered fo
 # Remote Telegram control via your phone
 /plugin install bob-chat@bob-tools/bob-plugins
 ```
+
+## Quick Start (Codex)
+
+In the Codex app: **Plugins → Add plugin marketplace**, then:
+
+| Field | Value |
+|-------|-------|
+| **Source** | `bob-tools/bob-plugins` |
+| **Git ref** | `main` |
+| **Sparse paths** | *(leave empty)* |
+
+Or via CLI:
+
+```bash
+codex plugin marketplace add bob-tools/bob-plugins
+```
+
+Then install `bob-chat`, `bob-tools`, or `bob-currency` from the list. All use HTTP transport with OAuth on first connection.
 
 ## Available Plugins
 

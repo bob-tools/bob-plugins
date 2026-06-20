@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "bob-currency": {
+      "type": "http",
+      "url": "https://api.bob.tools/mcp-currency",
+      "note": "Currency exchange rates for 178+ currencies. No authentication required."
+    }
+  }
+}

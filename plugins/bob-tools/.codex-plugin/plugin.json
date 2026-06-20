@@ -1,0 +1,25 @@
+{
+  "name": "bob-tools",
+  "version": "1.0.0",
+  "description": "BOB Tools — AI-powered forms and data management.",
+  "author": {
+    "name": "Bob Tools",
+    "email": "support@bob.tools",
+    "url": "https://bob.tools"
+  },
+  "homepage": "https://bob.tools",
+  "repository": "https://github.com/bob-tools/bob-plugins",
+  "keywords": ["forms", "data", "spreadsheet", "crm", "records", "files", "telegram"],
+  "interface": {
+    "displayName": "BOB Tools",
+    "shortDescription": "Forms, files, records and data management",
+    "longDescription": "Manage files, records, fields, views, dashboards, shares, integrations, and Telegram chats via the BOB Tools MCP server — 70+ tools for full data management.",
+    "developerName": "Bob Tools",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": ["Create a form, query records, or manage my files"],
+    "websiteURL": "https://bob.tools",
+    "brandColor": "#FF7A1A"
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "bob-currency",
+  "version": "1.0.0",
+  "description": "Current and historical currency exchange rates for 178+ currencies.",
+  "author": {
+    "name": "Bob Tools",
+    "email": "support@bob.tools",
+    "url": "https://bob.tools"
+  },
+  "homepage": "https://bob.tools",
+  "repository": "https://github.com/bob-tools/bob-plugins",
+  "keywords": ["currency", "exchange", "rates", "finance", "money"],
+  "interface": {
+    "displayName": "BOB Currency",
+    "shortDescription": "Currency exchange rates (no auth)",
+    "longDescription": "Access current and historical exchange rates for 178+ currencies. No authentication required.",
+    "developerName": "Bob Tools",
+    "category": "Productivity",
+    "capabilities": ["Interactive"],
+    "defaultPrompt": ["What's the current USD to EUR rate?"],
+    "websiteURL": "https://bob.tools",
+    "brandColor": "#FF7A1A"
+  },
+  "mcpServers": "./.mcp.json"
+}

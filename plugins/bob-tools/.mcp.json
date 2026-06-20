@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "bob-tools": {
+      "type": "http",
+      "url": "https://api.bob.tools/mcp",
+      "note": "BOB Tools MCP server — forms, files, records, Telegram. OAuth on first connection."
+    }
+  }
+}

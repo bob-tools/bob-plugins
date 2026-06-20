@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "bob-chat": {
+      "type": "http",
+      "url": "https://api.bob.tools/mcp-chat",
+      "note": "BOB Chat — remote Telegram control via your phone. OAuth on first connection. No chat data is stored server-side."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "bob-chat",
+  "version": "1.0.0",
+  "description": "BOB Chat — remote Telegram control via your phone over a cloud relay.",
+  "author": {
+    "name": "Bob Tools",
+    "email": "support@bob.tools",
+    "url": "https://bob.tools"
+  },
+  "homepage": "https://bob.tools",
+  "repository": "https://github.com/bob-tools/bob-plugins",
+  "keywords": ["telegram", "chat", "messaging", "remote", "control"],
+  "interface": {
+    "displayName": "BOB Chat",
+    "shortDescription": "Remote Telegram control via your phone",
+    "longDescription": "Control your Telegram through the BOB Chat phone app over a cloud relay — search contacts and messages, read unread, get recent history, send messages, and mark chats read. Runs entirely on your device; no chat data is stored server-side.",
+    "developerName": "Bob Tools",
+    "category": "Communication",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": ["Find a contact and send them a message, or summarize my unread chats"],
+    "websiteURL": "https://bob.tools",
+    "brandColor": "#FF7A1A"
+  },
+  "mcpServers": "./.mcp.json"
+}
