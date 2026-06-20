@@ -19,7 +19,9 @@
     "capabilities": ["Interactive", "Write"],
     "defaultPrompt": ["Find a contact and send them a message, or summarize my unread chats"],
     "websiteURL": "https://bob.tools",
-    "brandColor": "#FF7A1A"
+    "brandColor": "#FF7A1A",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
   },
   "mcpServers": "./.mcp.json"
 }

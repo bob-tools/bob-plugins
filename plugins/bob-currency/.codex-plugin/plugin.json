@@ -19,7 +19,9 @@
     "capabilities": ["Interactive"],
     "defaultPrompt": ["What's the current USD to EUR rate?"],
     "websiteURL": "https://bob.tools",
-    "brandColor": "#FF7A1A"
+    "brandColor": "#FF7A1A",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
   },
   "mcpServers": "./.mcp.json"
 }
