@@ -1,26 +1,26 @@
 # BOB Tools — Claude Code Plugin Marketplace
 
-Official plugin marketplace for [BOB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, and phone control.
+Official plugin marketplace for [BOB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, and Telegram control.
 
 ## Quick Start
 
 ### 1. Add the marketplace
 
 ```bash
-/plugin marketplace add ivbar/bob-plugins
+/plugin marketplace add bob-tools/bob-plugins
 ```
 
 ### 2. Install plugins
 
 ```bash
 # All-in-one data management (files, records, fields, views, shares, Telegram)
-/plugin install bob-tools@ivbar/bob-plugins
+/plugin install bob-tools@bob-tools/bob-plugins
 
 # Currency exchange rates (no auth needed)
-/plugin install bob-currency@ivbar/bob-plugins
+/plugin install bob-currency@bob-tools/bob-plugins
 
-# Remote Android phone control
-/plugin install bob-control@ivbar/bob-plugins
+# Remote Telegram control via your phone
+/plugin install bob-chat@bob-tools/bob-plugins
 ```
 
 ## Available Plugins
@@ -58,24 +58,23 @@ Current and historical exchange rates for 178+ currencies.
 
 **Auth:** None — public access.
 
-### bob-control
+### bob-chat
 
-Remote Android phone control via cloud relay (FCM).
+Remote Telegram control via cloud relay (FCM) — runs entirely on your phone, no chat data stored server-side.
 
 | Tool | Description |
 |------|-------------|
-| `phone_screenshot` | Capture screen as JPEG |
-| `phone_get_ui_tree` | Accessibility tree (preferred over screenshots) |
-| `phone_tap` / `phone_tap_text` | Tap by coordinates or visible text |
-| `phone_swipe` | Swipe gestures |
-| `phone_type` | Type text into focused field |
-| `phone_press_back/home/recents` | Navigation buttons |
-| `phone_get_apps` / `phone_open_app` | App management |
-| `phone_get_notifications` | Read/open/dismiss notifications |
-| `phone_enable_adb` / `phone_disable_adb` | ADB toggle |
-| `phone_list_devices` | List paired devices |
+| `chat_list_devices` | List linked BOB Chat devices and their Telegram accounts |
+| `chat_list_accounts` | List Telegram accounts signed in across devices |
+| `chat_search_contacts` | Resolve a name/@handle to writable chats across accounts |
+| `chat_search_messages` | Semantic search over incoming messages |
+| `chat_unread` | Digest of chats with unread incoming messages (channels excluded) |
+| `chat_recent` | Most recent messages from one chat |
+| `chat_send` | Send a text message to a chat |
+| `chat_mark_read` | Mark all unread incoming messages in a chat as read |
+| `chat_check_command` | Check the result of an async chat command |
 
-**Auth:** OAuth. Requires [BOB Control](https://play.google.com/store/apps/details?id=tools.bob.control) Android app installed on target device.
+**Auth:** OAuth. Requires the BOB Chat app installed and signed in on the target phone.
 
 ## Alternative: Direct MCP Setup
 
@@ -88,12 +87,11 @@ claude mcp add --transport http bob-tools https://api.bob.tools/mcp
 # Currency Rates
 claude mcp add --transport http bob-currency https://api.bob.tools/mcp-currency
 
-# Phone Control
-claude mcp add --transport http bob-control https://api.bob.tools/mcp-control
+# Telegram Control
+claude mcp add --transport http bob-chat https://api.bob.tools/mcp-chat
 ```
 
 ## Links
 
 - [bob.tools](https://bob.tools) — Landing page
 - [web.bob.tools](https://web.bob.tools) — Web app
-- [BOB Control on Google Play](https://play.google.com/store/apps/details?id=tools.bob.control) — Android app for phone control

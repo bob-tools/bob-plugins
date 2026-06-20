@@ -1,0 +1,13 @@
+{
+  "name": "bob-chat",
+  "version": "1.0.0",
+  "description": "BOB Chat — remote Telegram control via your phone over a cloud relay. Search contacts and messages, read unread, send messages, and mark chats read. Runs on-device; no chat data is stored.",
+  "author": "Bob Tools",
+  "homepage": "https://bob.tools",
+  "mcpServers": {
+    "bob-chat": {
+      "type": "http",
+      "url": "https://api.bob.tools/mcp-chat"
+    }
+  }
+}

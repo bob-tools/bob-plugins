@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "BOB Tools Plugins",
-  "description": "Official plugins for BOB Tools — AI-powered forms, data management, currency rates, and phone control",
+  "description": "Official plugins for BOB Tools — AI-powered forms, data management, currency rates, and Telegram control",
   "owner": {
     "name": "Bob Tools",
     "email": "support@bob.tools"
@@ -34,17 +34,17 @@
       "keywords": ["currency", "exchange", "rates", "finance", "money"]
     },
     {
-      "name": "bob-control",
-      "description": "Remote phone control via cloud relay — screenshots, UI tree, tap, swipe, type, app management, notifications. Requires BOB Control Android app.",
-      "category": "automation",
+      "name": "bob-chat",
+      "description": "Remote Telegram control via cloud relay — search contacts and messages, read unread, send messages, mark chats read. Runs on-device, no chat data stored. Requires the BOB Chat app.",
+      "category": "productivity",
       "version": "1.0.0",
       "author": {
         "name": "Bob Tools",
         "email": "support@bob.tools"
       },
-      "source": "./plugins/bob-control",
+      "source": "./plugins/bob-chat",
       "homepage": "https://bob.tools",
-      "keywords": ["phone", "android", "remote", "control", "automation", "testing"]
+      "keywords": ["telegram", "chat", "messaging", "remote", "control", "messages"]
     }
   ]
 }
