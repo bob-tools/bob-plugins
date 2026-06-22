@@ -111,6 +111,14 @@ claude mcp add --transport http bob-currency https://api.bob.tools/mcp-currency
 claude mcp add --transport http bob-chat https://api.bob.tools/mcp-chat
 ```
 
+## Claude Desktop bundle (`.mcpb`)
+
+For one-click install in Claude Desktop (no plugin system / no terminal), grab the bundle and double-click it:
+
+**[plugins/bob-chat/bob-chat.mcpb](plugins/bob-chat/bob-chat.mcpb)** — direct link: `https://github.com/bob-tools/bob-plugins/raw/main/plugins/bob-chat/bob-chat.mcpb`
+
+This is the single canonical copy — the bob.tools site links straight to it, so there's no duplicate to drift. It's a thin stdio relay to `https://api.bob.tools/mcp-chat`; source lives in `bob-chat-common/bob-chat-mcp/` (rebuild with `npm run bundle`, then copy the artifact here).
+
 ## Links
 
 - [bob.tools](https://bob.tools) — Landing page
