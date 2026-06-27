@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "bob-control": {
+      "type": "http",
+      "url": "https://api.bob.tools/mcp-control",
+      "note": "BOB Control — remote Android phone control via a cloud relay. Requires the BOB Control app installed and running on the target Android device. OAuth on first connection."
+    }
+  }
+}

@@ -45,6 +45,19 @@
       "source": "./plugins/bob-chat",
       "homepage": "https://bob.tools",
       "keywords": ["telegram", "chat", "messaging", "remote", "control", "messages"]
+    },
+    {
+      "name": "bob-control",
+      "description": "Remote Android phone control via cloud relay — screenshots, UI tree, tap, swipe, type, app management, notifications. Runs on your phone; requires the BOB Control Android app.",
+      "category": "automation",
+      "version": "1.2.7",
+      "author": {
+        "name": "Bob Tools",
+        "email": "support@bob.tools"
+      },
+      "source": "./plugins/bob-control",
+      "homepage": "https://bob.tools",
+      "keywords": ["phone", "android", "remote", "control", "automation", "testing"]
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "name": "bob-control",
+  "version": "1.2.7",
+  "description": "BOB Control — remote Android phone control via a cloud relay.",
+  "author": {
+    "name": "Bob Tools",
+    "email": "support@bob.tools",
+    "url": "https://bob.tools"
+  },
+  "homepage": "https://bob.tools",
+  "repository": "https://github.com/bob-tools/bob-plugins",
+  "keywords": ["phone", "android", "remote", "control", "automation", "testing"],
+  "interface": {
+    "displayName": "BOB Control",
+    "shortDescription": "Remote Android phone control via your phone",
+    "longDescription": "Control your Android phone through the BOB Control app over a cloud relay — capture screenshots, read the on-screen UI tree, tap, swipe, type, and manage apps and notifications. Runs entirely on your device; commands are relayed to the phone, not executed server-side.",
+    "developerName": "Bob Tools",
+    "category": "Automation",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": ["Take a screenshot of my phone and tell me what's on screen"],
+    "websiteURL": "https://bob.tools",
+    "brandColor": "#FF7A1A",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  },
+  "mcpServers": "./.mcp.json"
+}
