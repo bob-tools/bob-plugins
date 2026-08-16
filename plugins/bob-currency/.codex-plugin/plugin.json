@@ -11,7 +11,7 @@
   "repository": "https://github.com/bob-tools/bob-plugins",
   "keywords": ["currency", "exchange", "rates", "finance", "money"],
   "interface": {
-    "displayName": "BOB Currency",
+    "displayName": "BoB Currency",
     "shortDescription": "Currency exchange rates (no auth)",
     "longDescription": "Access current and historical exchange rates for 178+ currencies. No authentication required.",
     "developerName": "Bob Tools",

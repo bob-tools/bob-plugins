@@ -1,6 +1,6 @@
-# BOB Tools — Plugin Marketplace
+# BoB Tools — Plugin Marketplace
 
-Official plugin marketplace for [BOB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, Telegram, and Android phone control.
+Official plugin marketplace for [BoB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, Telegram, and Android phone control.
 
 Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** (`.agents/plugins/marketplace.json`) from the same repo.
 
@@ -50,7 +50,7 @@ Then install `bob-chat`, `bob-tools`, `bob-currency`, or `bob-control` from the 
 
 ### bob-tools
 
-Full BOB Tools integration — 70+ MCP tools for managing your data.
+Full BoB Tools integration — 70+ MCP tools for managing your data.
 
 | Category | Tools |
 |----------|-------|
@@ -87,7 +87,7 @@ Remote Telegram control via cloud relay (FCM) — runs entirely on your phone, n
 
 | Tool | Description |
 |------|-------------|
-| `chat_list_devices` | List linked BOB Chat devices and their Telegram accounts |
+| `chat_list_devices` | List linked BoB Chat devices and their Telegram accounts |
 | `chat_list_accounts` | List Telegram accounts signed in across devices |
 | `chat_search_contacts` | Resolve a name/@handle to writable chats across accounts |
 | `chat_search_messages` | Semantic search over incoming messages |
@@ -97,11 +97,11 @@ Remote Telegram control via cloud relay (FCM) — runs entirely on your phone, n
 | `chat_mark_read` | Mark all unread incoming messages in a chat as read |
 | `chat_check_command` | Check the result of an async chat command |
 
-**Auth:** OAuth. Requires the BOB Chat app installed and signed in on the target phone.
+**Auth:** OAuth. Requires the BoB Chat app installed and signed in on the target phone.
 
 ### bob-control
 
-Remote Android phone control via cloud relay (FCM) — commands run on your phone through the BOB Control app, nothing is executed server-side.
+Remote Android phone control via cloud relay (FCM) — commands run on your phone through the BoB Control app, nothing is executed server-side.
 
 | Tool | Description |
 |------|-------------|
@@ -119,14 +119,14 @@ Remote Android phone control via cloud relay (FCM) — commands run on your phon
 | `phone_enable_adb` / `phone_disable_adb` | Toggle the on-device ADB server |
 | `phone_check_command` | Check the result of an async control command |
 
-**Auth:** OAuth. Requires the [BOB Control](https://bob.tools) Android app installed and running on the target device.
+**Auth:** OAuth. Requires the [BoB Control](https://bob.tools) Android app installed and running on the target device.
 
 ## Alternative: Direct MCP Setup
 
 If you prefer adding MCP servers without the plugin system:
 
 ```bash
-# BOB Tools
+# BoB Tools
 claude mcp add --transport http bob-tools https://api.bob.tools/mcp
 
 # Currency Rates

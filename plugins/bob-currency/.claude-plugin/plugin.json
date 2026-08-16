@@ -1,7 +1,7 @@
 {
   "name": "bob-currency",
   "version": "1.0.0",
-  "description": "BOB Currency Rates — current and historical exchange rates for 178+ currencies. No authentication required.",
+  "description": "BoB Currency Rates — current and historical exchange rates for 178+ currencies. No authentication required.",
   "author": "Bob Tools",
   "homepage": "https://bob.tools",
   "mcpServers": {

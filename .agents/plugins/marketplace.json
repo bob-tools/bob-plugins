@@ -1,7 +1,7 @@
 {
   "name": "bob-tools",
   "interface": {
-    "displayName": "BOB Tools"
+    "displayName": "BoB Tools"
   },
   "plugins": [
     {
