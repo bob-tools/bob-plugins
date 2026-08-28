@@ -83,7 +83,7 @@ Current and historical exchange rates for 178+ currencies.
 
 ### bob-chat
 
-Remote Telegram control via cloud relay (FCM) — runs entirely on your phone, no chat data stored server-side.
+Remote Telegram control via cloud relay (FCM) — the commands run on your phone.
 
 | Tool | Description |
 |------|-------------|
