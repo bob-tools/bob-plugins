@@ -70,7 +70,7 @@ Full BoB Tools integration — 70+ MCP tools for managing your data.
 
 ### bob-currency
 
-Current and historical exchange rates for 178+ currencies.
+Current and historical exchange rates for 140+ currencies.
 
 | Tool | Description |
 |------|-------------|
