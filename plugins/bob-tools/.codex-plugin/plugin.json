@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "BoB Tools — AI-powered forms and data management.",
   "author": {
-    "name": "Bob Tools",
+    "name": "BoB Tools",
     "email": "support@bob.tools",
     "url": "https://bob.tools"
   },
@@ -14,7 +14,7 @@
     "displayName": "BoB Tools",
     "shortDescription": "Forms, files, records and data management",
     "longDescription": "Manage files, records, fields, views, dashboards, shares, integrations, and Telegram chats via the BoB Tools MCP server — 70+ tools for full data management.",
-    "developerName": "Bob Tools",
+    "developerName": "BoB Tools",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
     "defaultPrompt": ["Create a form, query records, or manage my files"],
