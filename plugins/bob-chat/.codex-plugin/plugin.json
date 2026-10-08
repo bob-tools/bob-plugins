@@ -1,7 +1,7 @@
 {
   "name": "bob-chat",
   "version": "1.1.0",
-  "description": "BoB Chat — remote Telegram control via your phone over a cloud relay.",
+  "description": "BoB Chat — remote Telegram and WhatsApp control via your phone or Mac over a cloud relay (up to 4 accounts per device). See linked devices and accounts, list chats, read unread/recent with pagination, search contacts and message history, send messages, and mark chats read. Runs on-device.",
   "author": {
     "name": "BoB Tools",
     "email": "support@bob.tools",
@@ -9,11 +9,11 @@
   },
   "homepage": "https://bob.tools",
   "repository": "https://github.com/bob-tools/bob-plugins",
-  "keywords": ["telegram", "chat", "messaging", "remote", "control"],
+  "keywords": ["telegram", "whatsapp", "chat", "messaging", "remote", "control"],
   "interface": {
     "displayName": "BoB Chat",
-    "shortDescription": "Remote Telegram control via your phone",
-    "longDescription": "Control your Telegram through the BoB Chat phone app over a cloud relay — list chats (filter by type: people/bots/groups/channels), search contacts and messages, read unread/recent with pagination, send messages, and mark chats read. Runs entirely on your device.",
+    "shortDescription": "Remote Telegram and WhatsApp control via your phone",
+    "longDescription": "Control your Telegram and WhatsApp through the BoB Chat app (Android / iOS / macOS, up to 4 accounts per device) over a cloud relay — see linked devices and what MCP may do, list chats (filter by type: people/bots/groups/channels), read unread/recent with pagination, search contacts and message history, send messages, and mark chats read. Runs entirely on your device; no chat data is stored server-side.",
     "developerName": "BoB Tools",
     "category": "Communication",
     "capabilities": ["Interactive", "Write"],

@@ -1,6 +1,6 @@
 # BoB Tools — Plugin Marketplace
 
-Official plugin marketplace for [BoB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, Telegram, and Android phone control.
+Official plugin marketplace for [BoB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, Telegram and WhatsApp chats, and Android phone control.
 
 Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** (`.agents/plugins/marketplace.json`) from the same repo.
 
@@ -21,7 +21,7 @@ Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** 
 # Currency exchange rates (no auth needed)
 /plugin install bob-currency@bob-tools/bob-plugins
 
-# Remote Telegram control via your phone
+# Remote Telegram and WhatsApp control via your phone
 /plugin install bob-chat@bob-tools/bob-plugins
 
 # Remote Android phone control via your phone
@@ -68,6 +68,8 @@ Full BoB Tools integration — 70+ MCP tools for managing your data.
 
 **Auth:** OAuth — opens automatically on first tool call.
 
+**Quota:** the free plan includes 250 MCP calls a day, then $1 per 10,000 calls from your balance; BoB Pro / Max are unlimited.
+
 ### bob-currency
 
 Current and historical exchange rates for 140+ currencies.
@@ -79,25 +81,27 @@ Current and historical exchange rates for 140+ currencies.
 | `get_historical_rates` | Hourly or daily aggregated history |
 | `get_data_availability` | Check data date ranges |
 
-**Auth:** None — public access.
+**Auth:** None — public access, no quota.
 
 ### bob-chat
 
-Remote Telegram control via cloud relay (FCM) — the commands run on your phone.
+Remote Telegram and WhatsApp control via cloud relay (FCM) — the commands run on your phone or Mac, up to 4 accounts per device. No chat data is stored server-side.
 
 | Tool | Description |
 |------|-------------|
-| `chat_list_devices` | List linked BoB Chat devices and their Telegram accounts |
-| `chat_list_accounts` | List Telegram accounts signed in across devices |
-| `chat_search_contacts` | Resolve a name/@handle to writable chats across accounts |
-| `chat_search_messages` | Semantic search over incoming messages |
-| `chat_unread` | Digest of chats with unread incoming messages (channels excluded) |
-| `chat_recent` | Most recent messages from one chat |
-| `chat_send` | Send a text message to a chat |
+| `chat_overview` | Start here: linked devices, the accounts on each, and what MCP may do with them (read / send, chat kinds) |
+| `chat_unread` | Digest of chats with unread incoming messages across every account MCP may read |
+| `chat_list` | List all chats, most recent first, filterable by type or account, with pagination |
+| `chat_recent` | Messages from one chat, pulled live: the unread run by default, or the latest tail |
+| `chat_search_contacts` | Resolve a name/@handle to writable chats across all accounts |
+| `chat_search_messages` | Full-text search across chat history (Telegram's server-side word search, not semantic) |
+| `chat_send` | Send a text message to a chat (offered only when a device allows sending) |
 | `chat_mark_read` | Mark all unread incoming messages in a chat as read |
-| `chat_check_command` | Check the result of an async chat command |
+| `chat_check_command` | Fetch the result of a command the phone has not answered yet (polling is free) |
 
-**Auth:** OAuth. Requires the BoB Chat app installed and signed in on the target phone.
+**Auth:** OAuth. Requires the BoB Chat app (Android / iOS / macOS) signed in to Telegram or WhatsApp and linked to your bob.tools account; setup guide: https://bob.tools/chat/connect/
+
+**Quota:** the free plan includes 30 remote requests a day; BoB Chat Pro / BoB Max are unlimited.
 
 ### bob-control
 
@@ -120,6 +124,8 @@ Remote Android phone control via cloud relay (FCM) — commands run on your phon
 | `phone_check_command` | Check the result of an async control command |
 
 **Auth:** OAuth. Requires the [BoB Control](https://bob.tools) Android app installed and running on the target device.
+
+**Quota:** the free plan includes 250 MCP calls a day, then $1 per 10,000 calls from your balance; BoB Pro / Max are unlimited.
 
 ## Alternative: Direct MCP Setup
 

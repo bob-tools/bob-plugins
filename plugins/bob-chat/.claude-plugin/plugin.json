@@ -1,7 +1,7 @@
 {
   "name": "bob-chat",
   "version": "1.2.0",
-  "description": "BoB Chat — remote Telegram control via your phone over a cloud relay. List chats (filter by type), search contacts and messages, read unread/recent with pagination, send messages, and mark chats read. Runs on-device.",
+  "description": "BoB Chat — remote Telegram and WhatsApp control via your phone or Mac over a cloud relay (up to 4 accounts per device). See linked devices and accounts, list chats, read unread/recent with pagination, search contacts and message history, send messages, and mark chats read. Runs on-device.",
   "author": "BoB Tools",
   "homepage": "https://bob.tools",
   "mcpServers": {

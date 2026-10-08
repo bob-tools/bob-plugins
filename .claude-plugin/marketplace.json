@@ -35,7 +35,7 @@
     },
     {
       "name": "bob-chat",
-      "description": "Remote Telegram control via cloud relay — list chats (filter by type), search contacts, read unread/recent with pagination, send messages, mark chats read. Runs on-device. Requires the BoB Chat app.",
+      "description": "Remote Telegram and WhatsApp control via cloud relay — list chats (filter by type), search contacts and messages, read unread/recent with pagination, send messages, mark chats read. Runs on-device. Requires the BoB Chat app.",
       "category": "productivity",
       "version": "1.2.0",
       "author": {
@@ -44,7 +44,7 @@
       },
       "source": "./plugins/bob-chat",
       "homepage": "https://bob.tools",
-      "keywords": ["telegram", "chat", "messaging", "remote", "control", "messages"]
+      "keywords": ["telegram", "whatsapp", "chat", "messaging", "remote", "control", "messages"]
     },
     {
       "name": "bob-control",

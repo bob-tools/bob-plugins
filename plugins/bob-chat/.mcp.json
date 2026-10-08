@@ -3,7 +3,7 @@
     "bob-chat": {
       "type": "http",
       "url": "https://api.bob.tools/mcp-chat",
-      "note": "BoB Chat — remote Telegram control via your phone. OAuth on first connection. No chat data is stored server-side."
+      "note": "BoB Chat — remote Telegram and WhatsApp control via your phone. OAuth on first connection. No chat data is stored server-side."
     }
   }
 }
