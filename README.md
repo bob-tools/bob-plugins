@@ -16,16 +16,16 @@ Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** 
 
 ```bash
 # All-in-one data management (files, records, fields, views, shares, Telegram)
-/plugin install bob-tools@bob-tools/bob-plugins
+/plugin install bob-tools@bob-plugins
 
 # Currency exchange rates (no auth needed)
-/plugin install bob-currency@bob-tools/bob-plugins
+/plugin install bob-currency@bob-plugins
 
 # Remote Telegram and WhatsApp control via your phone
-/plugin install bob-chat@bob-tools/bob-plugins
+/plugin install bob-chat@bob-plugins
 
 # Remote Android phone control via your phone
-/plugin install bob-control@bob-tools/bob-plugins
+/plugin install bob-control@bob-plugins
 ```
 
 ## Quick Start (Codex)
