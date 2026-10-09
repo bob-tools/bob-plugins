@@ -85,7 +85,7 @@ Current and historical exchange rates for 140+ currencies.
 
 ### bob-chat
 
-Remote Telegram and WhatsApp control via cloud relay (FCM) — the commands run on your phone or Mac, up to 4 accounts per device. No chat data is stored server-side.
+Remote Telegram and WhatsApp control via cloud relay (FCM) — the commands run on your phone or Mac, up to 4 accounts per device. Relay results are kept on the server for 7 days, then deleted.
 
 | Tool | Description |
 |------|-------------|
