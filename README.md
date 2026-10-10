@@ -139,7 +139,7 @@ claude mcp add --transport http bob-tools https://api.bob.tools/mcp
 claude mcp add --transport http bob-currency https://api.bob.tools/mcp-currency
 
 # Telegram Control
-claude mcp add --transport http bob-chat https://api.bob.tools/mcp-chat
+claude mcp add --transport http bob-chat https://chat-mcp.bob.tools
 
 # Android Phone Control
 claude mcp add --transport http bob-control https://api.bob.tools/mcp-control
@@ -151,7 +151,7 @@ For one-click install in Claude Desktop (no plugin system / no terminal), grab t
 
 **[plugins/bob-chat/bob-chat.mcpb](plugins/bob-chat/bob-chat.mcpb)** — direct link: `https://github.com/bob-tools/bob-plugins/raw/main/plugins/bob-chat/bob-chat.mcpb`
 
-This is the single canonical copy — the bob.tools site links straight to it, so there's no duplicate to drift. It's a thin stdio relay to `https://api.bob.tools/mcp-chat`; source lives in `bob-chat-common/bob-chat-mcp/` (rebuild with `npm run bundle`, then copy the artifact here).
+This is the single canonical copy — the bob.tools site links straight to it, so there's no duplicate to drift. It's a thin stdio relay to `https://chat-mcp.bob.tools`; source lives in `bob-chat-common/bob-chat-mcp/` (rebuild with `npm run bundle`, then copy the artifact here).
 
 ## Links
 
