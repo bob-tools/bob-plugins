@@ -1,13 +1,13 @@
 {
   "name": "bob-currency",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "BoB Currency Rates — current and historical exchange rates for 140+ currencies. No authentication required.",
   "author": { "name": "BoB Tools", "email": "support@bob.tools" },
   "homepage": "https://bob.tools",
   "mcpServers": {
     "bob-currency": {
       "type": "http",
-      "url": "https://api.bob.tools/mcp-currency"
+      "url": "https://mcp-currency.bob.tools"
     }
   }
 }

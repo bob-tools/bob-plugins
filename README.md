@@ -136,7 +136,7 @@ If you prefer adding MCP servers without the plugin system:
 claude mcp add --transport http bob-tools https://api.bob.tools/mcp
 
 # Currency Rates
-claude mcp add --transport http bob-currency https://api.bob.tools/mcp-currency
+claude mcp add --transport http bob-currency https://mcp-currency.bob.tools
 
 # Telegram Control
 claude mcp add --transport http bob-chat https://chat-mcp.bob.tools
