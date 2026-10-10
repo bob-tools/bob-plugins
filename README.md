@@ -18,7 +18,7 @@ Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** 
 # All-in-one data management (files, records, fields, views, shares, Telegram)
 /plugin install bob-tools@bob-plugins
 
-# Currency exchange rates (no auth needed)
+# Currency exchange rates (works without sign-in)
 /plugin install bob-currency@bob-plugins
 
 # Remote Telegram and WhatsApp control via your phone

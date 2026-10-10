@@ -1,6 +1,6 @@
 {
   "name": "bob-currency",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "BoB Currency Rates — current and historical exchange rates for 140+ currencies. Works without sign-in; optional BoB account sign-in when the shared free limit is used up.",
   "author": { "name": "BoB Tools", "email": "support@bob.tools" },
   "homepage": "https://bob.tools",
