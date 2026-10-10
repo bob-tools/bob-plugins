@@ -3,7 +3,7 @@
     "bob-currency": {
       "type": "http",
       "url": "https://mcp-currency.bob.tools",
-      "note": "Currency exchange rates for 140+ currencies. No authentication required."
+      "note": "Currency exchange rates for 140+ currencies. Works without sign-in; optional BoB account sign-in when the shared free limit is used up."
     }
   }
 }

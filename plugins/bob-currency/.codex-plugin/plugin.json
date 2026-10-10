@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "BoB Currency",
     "shortDescription": "Currency exchange rates (no auth)",
-    "longDescription": "Access current and historical exchange rates for 140+ currencies. No authentication required.",
+    "longDescription": "Access current and historical exchange rates for 140+ currencies. Works without sign-in; optional BoB account sign-in when the shared free limit is used up.",
     "developerName": "BoB Tools",
     "category": "Productivity",
     "capabilities": ["Interactive"],
