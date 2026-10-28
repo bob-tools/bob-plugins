@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "BoB Chat",
     "shortDescription": "Remote Telegram control via your phone",
-    "longDescription": "Control your Telegram through the BoB Chat app (Android / iOS / macOS, up to 4 accounts per device) over a cloud relay — see linked devices and what MCP may do, list chats (filter by type: people/bots/groups/channels), read unread/recent with pagination, search contacts and message history, send messages, and mark chats read. Runs entirely on your device; no chat data is stored server-side.",
+    "longDescription": "Control your Telegram through the BoB Chat app (Android / iOS / macOS, up to 4 accounts per device) over a cloud relay — see linked devices and what MCP may do, list chats (filter by type: people/bots/groups/channels), read unread/recent with pagination, search contacts and message history, send messages, and mark chats read. Runs on your device. Relay results are kept on the server for 7 days, then deleted.",
     "developerName": "BoB Tools",
     "category": "Communication",
     "capabilities": ["Interactive", "Write"],
