@@ -1,6 +1,6 @@
 # BoB Tools — Plugin Marketplace
 
-Official plugin marketplace for [BoB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, Telegram and WhatsApp chats, and Android phone control.
+Plugin marketplace for [BoB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, Telegram chats, and Android phone control.
 
 Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** (`.agents/plugins/marketplace.json`) from the same repo.
 
@@ -21,7 +21,7 @@ Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** 
 # Currency exchange rates (works without sign-in)
 /plugin install bob-currency@bob-plugins
 
-# Remote Telegram and WhatsApp control via your phone
+# Remote Telegram control via your phone
 /plugin install bob-chat@bob-plugins
 
 # Remote Android phone control via your phone
@@ -85,7 +85,7 @@ Current and historical exchange rates for 140+ currencies.
 
 ### bob-chat
 
-Remote Telegram and WhatsApp control via cloud relay (FCM) — the commands run on your phone or Mac, up to 4 accounts per device. Relay results are kept on the server for 7 days, then deleted.
+Remote Telegram control via cloud relay (FCM) — the commands run on your phone or Mac, up to 4 accounts per device. Relay results are kept on the server for 7 days, then deleted.
 
 | Tool | Description |
 |------|-------------|
@@ -99,7 +99,7 @@ Remote Telegram and WhatsApp control via cloud relay (FCM) — the commands run 
 | `chat_mark_read` | Mark all unread incoming messages in a chat as read |
 | `chat_check_command` | Fetch the result of a command the phone has not answered yet (polling is free) |
 
-**Auth:** OAuth. Requires the BoB Chat app (Android / iOS / macOS) signed in to Telegram or WhatsApp and linked to your bob.tools account; setup guide: https://bob.tools/chat/connect/
+**Auth:** OAuth. Requires the BoB Chat app (Android / iOS / macOS) signed in to Telegram and linked to your bob.tools account; setup guide: https://bob.tools/chat/connect/
 
 **Quota:** the free plan includes 30 remote requests a day; BoB Chat Pro / BoB Max are unlimited.
 
