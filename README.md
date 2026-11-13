@@ -99,7 +99,7 @@ Remote Telegram control via cloud relay (FCM) — the commands run on your phone
 | `chat_mark_read` | Mark all unread incoming messages in a chat as read |
 | `chat_check_command` | Fetch the result of a command the phone has not answered yet (polling is free) |
 
-**Auth:** OAuth. Requires the BoB Chat app (Android / iOS / macOS) signed in to Telegram and linked to your bob.tools account; setup guide: https://bob.tools/chat/connect/
+**Auth:** OAuth. Requires the BoB Chat app (Android / iOS / macOS) signed in to Telegram and linked to your bob.tools account; setup guide: https://chat.bob.tools/chat/connect/
 
 **Quota:** the free plan includes 30 remote requests a day; BoB Chat Pro / BoB Max are unlimited.
 
