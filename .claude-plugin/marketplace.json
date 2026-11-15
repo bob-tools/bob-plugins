@@ -35,7 +35,7 @@
     },
     {
       "name": "bob-chat",
-      "description": "Remote Telegram control via cloud relay — list chats (filter by type), search contacts and messages, read unread/recent with pagination, send messages, mark chats read. Runs on-device. Requires the BoB Chat app.",
+      "description": "Connect Telegram to your AI: read, search and answer your own chats through the BoB Chat phone app. List chats, search contacts and messages, read unread and recent messages, send messages, mark chats read. Requires the BoB Chat app.",
       "category": "productivity",
       "version": "1.2.1",
       "author": {
@@ -43,8 +43,8 @@
         "email": "support@bob.tools"
       },
       "source": "./plugins/bob-chat",
-      "homepage": "https://bob.tools",
-      "keywords": ["telegram", "chat", "messaging", "remote", "control", "messages"]
+      "homepage": "https://chat.bob.tools/chat/connect/",
+      "keywords": ["telegram", "chat", "messaging", "productivity", "remote", "messages"]
     },
     {
       "name": "bob-control",

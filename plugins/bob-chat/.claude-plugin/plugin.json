@@ -1,9 +1,9 @@
 {
   "name": "bob-chat",
   "version": "1.2.1",
-  "description": "BoB Chat — remote Telegram control via your phone or Mac over a cloud relay (up to 4 accounts per device). See linked devices and accounts, list chats, read unread/recent with pagination, search contacts and message history, send messages, and mark chats read. Runs on-device.",
+  "description": "Connect Telegram to your AI: read, search and answer your own chats through the BoB Chat phone app. Works with Claude, Codex, Cursor and other MCP clients. See linked devices and accounts, list chats, read unread and recent messages, search contacts and message history, send messages, and mark chats read.",
   "author": { "name": "BoB Tools", "email": "support@bob.tools" },
-  "homepage": "https://bob.tools",
+  "homepage": "https://chat.bob.tools/chat/connect/",
   "mcpServers": {
     "bob-chat": {
       "type": "http",
