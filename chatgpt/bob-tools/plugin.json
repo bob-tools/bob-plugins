@@ -55,7 +55,7 @@
               "description": "List the user's tables",
               "prompt": "What tables do I have in BoB Tools?",
               "tools_triggered": "get_account",
-              "expected_behavior": "Calls get_account and lists the demo account's companies and files, including Site visits and Deliveries. Nothing is changed."
+              "expected_behavior": "Calls get_account and lists the demo account's files, including Site visits and Deliveries. Nothing is changed."
             },
             {
               "description": "Summarize records by a field",
