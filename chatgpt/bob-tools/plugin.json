@@ -25,7 +25,7 @@
       "interface": {
         "displayName": "BoB Tools",
         "shortDescription": "Apps for Business",
-        "longDescription": "BoB Tools — Apps for Business. Get an app your team installs. Works offline. From $1 a seat. No developer.\n\nConnect your BoB Tools workspace and run your team's business apps from ChatGPT. Describe what your team tracks (site visits, orders, inspections, deliveries) and ChatGPT builds the app: a table with the right fields, screens your crew uses on their phones, a dashboard for the office and a share link for customers.\n\nOnce there is data, ask in plain language: how many jobs closed last week by crew, which deliveries are late, what changed today. ChatGPT sees exactly what your BoB Tools account sees and asks before it changes or deletes anything.",
+        "longDescription": "BoB Tools — Apps for Business. Get an app your team installs. Works offline. From $1 a seat. No developer.\n\nConnect your BoB Tools workspace and run your team's business apps from ChatGPT. Describe what your team tracks (jobs, orders, inspections, deliveries) and ChatGPT builds the app: a table with the right fields, screens your crew uses on their phones, a dashboard for the office and a share link for customers.\n\nOnce there is data, ask in plain language: how many jobs closed last week by crew, which deliveries are late, what changed today. ChatGPT sees exactly what your BoB Tools account sees and asks before it changes or deletes anything.",
         "developerName": "BoB Tools LLP",
         "category": "Productivity",
         "capabilities": [
@@ -41,8 +41,8 @@
         "termsOfServiceURL": "https://bob.tools/terms/",
         "defaultPrompt": [
           "What tables do I have in BoB Tools?",
-          "How many site visits do we have by status?",
-          "Build an app for our site visits: client, address, date, status, photos"
+          "How much did we spend by category this month?",
+          "Build an app for our job visits: client, address, date, status, photos"
         ],
         "brandColor": "#FF6B00",
         "composerIcon": "./assets/icon.png",
