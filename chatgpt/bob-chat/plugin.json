@@ -63,16 +63,16 @@
               "expected_behavior": "Calls chat_unread, then chat_recent for the unread chats, and summarises who wrote and what needs a reply (on the demo account: the chat with Max and the Pavel Durov and Telegram Tips channels). If an earlier test already read everything, it says there is nothing unread. Read-only: messages stay unread."
             },
             {
-              "description": "Full-text search across the history",
-              "prompt": "Find the Telegram message where someone mentioned the invoice.",
-              "tools_triggered": "chat_search_messages",
-              "expected_behavior": "Calls chat_search_messages with a query such as \"invoice\" and quotes the hit: Max asking for the invoice for order 1042 by Friday, with the chat and date. chat_recent may be called to show the surrounding messages. Read-only."
+              "description": "List the chats of the linked account",
+              "prompt": "List my Telegram chats.",
+              "tools_triggered": "chat_list",
+              "expected_behavior": "Calls chat_list and shows the chats of the linked account with their names and kinds (on the demo account: the private chat with Max and the Pavel Durov and Telegram Tips channels, among others). Read-only: nothing is sent and nothing is marked as read."
             },
             {
               "description": "Read the latest messages of one chat",
               "prompt": "Show the last 5 messages in my Telegram chat with Max.",
               "tools_triggered": "chat_search_contacts, chat_recent",
-              "expected_behavior": "Calls chat_search_contacts with \"Max\" to get the accountId and chatId, then chat_recent with unread_only false and limit 5, and shows the five newest messages with sender and time. Read-only."
+              "expected_behavior": "Calls chat_search_contacts with \"Max\" to get the accountId and chatId, then chat_recent with unread_only false and limit 5, and shows the newest messages (up to five) with sender and time. Read-only."
             },
             {
               "description": "Send a message as the user, after approval",
