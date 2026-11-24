@@ -54,13 +54,13 @@
               "description": "Show the linked Telegram accounts and what the connection may do",
               "prompt": "Which Telegram accounts are linked to BoB Chat, and what are you allowed to do with them?",
               "tools_triggered": "chat_overview",
-              "expected_behavior": "Calls chat_overview and lists the demo phone with one Telegram account (Alex), saying that reading person, group and bot chats and sending are allowed. Nothing is changed and nothing is sent."
+              "expected_behavior": "Calls chat_overview and lists the demo phone with one Telegram account (Bob), saying that reading personal chats, groups and channels and sending are allowed (bot chats are turned off). Nothing is changed and nothing is sent."
             },
             {
               "description": "Catch up on unread chats",
               "prompt": "What did I miss in Telegram? Summarise my unread chats.",
               "tools_triggered": "chat_unread, chat_recent",
-              "expected_behavior": "Calls chat_unread, then chat_recent for the unread chats, and summarises who wrote and what needs a reply (on the prepared data: Anna and the Site Team group). If an earlier test already read everything, it says there is nothing unread. Read-only: messages stay unread."
+              "expected_behavior": "Calls chat_unread, then chat_recent for the unread chats, and summarises who wrote and what needs a reply (on the demo account: the chat with Max and the Pavel Durov and Telegram Tips channels). If an earlier test already read everything, it says there is nothing unread. Read-only: messages stay unread."
             },
             {
               "description": "Full-text search across the history",
@@ -96,7 +96,7 @@
             }
           ]
         },
-        "demo_recording_url": "",
+        "demo_recording_url": "https://youtu.be/OLspY9wUWNk",
         "commerce": false,
         "commerce_description": "The plugin does not sell products or process payments."
       },
