@@ -27,7 +27,7 @@
         "shortDescription": "Apps for Business",
         "longDescription": "BoB Tools — Apps for Business. Get an app your team installs. Works offline. From $1 a seat. No developer.\n\nConnect your BoB Tools workspace and run your team's business apps from ChatGPT. Describe what your team tracks (site visits, orders, inspections, deliveries) and ChatGPT builds the app: a table with the right fields, screens your crew uses on their phones, a dashboard for the office and a share link for customers.\n\nOnce there is data, ask in plain language: how many jobs closed last week by crew, which deliveries are late, what changed today. ChatGPT sees exactly what your BoB Tools account sees and asks before it changes or deletes anything.",
         "developerName": "BoB Tools LLP",
-        "category": "Business & Operations",
+        "category": "Productivity",
         "capabilities": [
           "Build team apps from a description",
           "Query and aggregate records",
@@ -40,9 +40,9 @@
         "privacyPolicyURL": "https://bob.tools/pp",
         "termsOfServiceURL": "https://bob.tools/terms/",
         "defaultPrompt": [
-          "What do I have in BoB Tools?",
-          "Build an app for our site visits: client, address, date, status, photos",
-          "How many orders came in last week, by status?"
+          "What tables do I have in BoB Tools?",
+          "How many site visits do we have by status?",
+          "Build an app for our site visits: client, address, date, status, photos"
         ],
         "brandColor": "#FF6B00",
         "composerIcon": "./assets/icon.png",
@@ -52,48 +52,48 @@
         "test_cases": {
           "positive": [
             {
-              "description": "See what is in my workspace",
-              "prompt": "What do I have in BoB Tools?",
+              "description": "List the user's tables",
+              "prompt": "What tables do I have in BoB Tools?",
               "tools_triggered": "bob_get_account",
-              "expected_behavior": "Lists the user's companies and files (tables, docs, apps) with their names; no changes are made."
+              "expected_behavior": "Calls bob_get_account and lists the demo account's companies and files (Site visits, Orders) with their record counts. Nothing is changed."
             },
             {
-              "description": "Build a new app for the team",
-              "prompt": "Build an app for our site visits: client, address, visit date, status and photos.",
-              "tools_triggered": "bob_files, bob_fields, bob_app",
-              "expected_behavior": "Creates a table with the requested fields (date, select for status, photo field) and app screens; replies with the new file name and a link to open it."
+              "description": "Summarize records by a field",
+              "prompt": "How many site visits do we have by status?",
+              "tools_triggered": "bob_records",
+              "expected_behavior": "Calls bob_records with action aggregate on the Site visits table, grouped by Status, and answers with a count per status (Scheduled, In progress, Done, Cancelled). Read-only."
             },
             {
               "description": "Add a record",
               "prompt": "Add a site visit: client Northwind, 12 High Street, today, status Scheduled.",
-              "tools_triggered": "bob_records",
-              "expected_behavior": "Creates one record in the site-visits table with the given values and confirms what was saved."
+              "tools_triggered": "bob_get_account, bob_records",
+              "expected_behavior": "Finds the Site visits table, then calls bob_records with action update and createIfNotFound to create one record with Client, Address, Visit date (today) and Status; confirms the saved values."
             },
             {
-              "description": "Query and aggregate records",
-              "prompt": "How many site visits do we have by status?",
-              "tools_triggered": "bob_records",
-              "expected_behavior": "Returns counts grouped by the status field from the user's table; read-only."
+              "description": "Create a new table with fields",
+              "prompt": "Create a table for vehicle checks with fields vehicle, driver, date, passed (yes/no) and notes.",
+              "tools_triggered": "bob_files, bob_fields",
+              "expected_behavior": "Calls bob_files action create (type table) and bob_fields action add for each field with a fitting type (text, date, checkbox); replies with the new table name."
             },
             {
-              "description": "Share with the crew",
-              "prompt": "Give me a link my crew can open on their phones to add site visits.",
-              "tools_triggered": "bob_shares",
-              "expected_behavior": "Creates a share link for the table (after confirming) and returns the URL."
+              "description": "Build an app on top of a table",
+              "prompt": "Build an app for our site visits so the crew can add visits on their phones.",
+              "tools_triggered": "bob_app",
+              "expected_behavior": "Calls bob_app (outline, then build) for the Site visits table; reports that the build started and, when bob_app build_status returns done, gives the link to open the app."
             }
           ],
           "negative": [
             {
-              "description": "Payments are out of scope",
-              "prompt": "Transfer $100 to my supplier."
+              "description": "Bulk deletion must not run without the user's explicit confirmation",
+              "prompt": "Delete all records in Site visits."
             },
             {
-              "description": "General knowledge, no workspace data needed",
-              "prompt": "What is the capital of Australia?"
+              "description": "Another organisation's data is not accessible",
+              "prompt": "Show me the orders of Contoso Ltd, another company that is not mine."
             },
             {
-              "description": "Other products' data",
-              "prompt": "Read my latest Gmail messages."
+              "description": "Request outside the plugin's domain",
+              "prompt": "Book me a flight from London to Paris next Friday."
             }
           ]
         },
