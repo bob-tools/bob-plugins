@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bob-tools",
+  "version": "1.0.0",
+  "description": "BoB Tools — Apps for Business. Build and run your team's apps from Gemini: tables, records, dashboards, docs and share links.",
+  "author": {
+    "name": "BoB Tools",
+    "email": "support@bob.tools"
+  },
+  "homepage": "https://bob.tools/mcp/",
+  "repository": "https://github.com/bob-tools/bob-plugins",
+  "keywords": [
+    "apps",
+    "business-apps",
+    "no-code",
+    "data",
+    "dashboards",
+    "offline"
+  ]
+}

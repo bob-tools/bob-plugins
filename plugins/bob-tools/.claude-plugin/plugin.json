@@ -1,8 +1,11 @@
 {
   "name": "bob-tools",
   "version": "1.0.0",
-  "description": "BoB Tools — AI-powered forms and data management. Manage files, records, fields, views, dashboards, shares, integrations, and Telegram chats.",
-  "author": { "name": "BoB Tools", "email": "support@bob.tools" },
+  "description": "BoB Tools — Apps for Business. Build and run your team's apps from your AI: tables, records, dashboards, docs and share links. Your crew uses the app offline on the phone.",
+  "author": {
+    "name": "BoB Tools",
+    "email": "support@bob.tools"
+  },
   "homepage": "https://bob.tools",
   "mcpServers": {
     "bob-tools": {

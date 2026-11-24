@@ -1,7 +1,7 @@
 {
   "name": "bob-tools",
   "version": "1.0.0",
-  "description": "BoB Tools — AI-powered forms and data management.",
+  "description": "BoB Tools — Apps for Business.",
   "author": {
     "name": "BoB Tools",
     "email": "support@bob.tools",
@@ -9,15 +9,31 @@
   },
   "homepage": "https://bob.tools",
   "repository": "https://github.com/bob-tools/bob-plugins",
-  "keywords": ["forms", "data", "spreadsheet", "crm", "records", "files", "telegram"],
+  "keywords": [
+    "apps",
+    "business-apps",
+    "no-code",
+    "data",
+    "spreadsheet",
+    "crm",
+    "dashboards",
+    "records",
+    "offline",
+    "telegram"
+  ],
   "interface": {
     "displayName": "BoB Tools",
-    "shortDescription": "Forms, files, records and data management",
-    "longDescription": "Manage files, records, fields, views, dashboards, shares, integrations, and Telegram chats via the BoB Tools MCP server — 70+ tools for full data management.",
+    "shortDescription": "Your team's business apps: tables, records, dashboards",
+    "longDescription": "BoB Tools — Apps for Business. Build and run your team's apps from your AI: tables, records, fields, views, dashboards, docs, share links and Telegram customer chats. Your crew uses the app offline on the phone.",
     "developerName": "BoB Tools",
     "category": "Productivity",
-    "capabilities": ["Interactive", "Write"],
-    "defaultPrompt": ["Create a form, query records, or manage my files"],
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Build an app for my team's site visits, or show last week's records by status"
+    ],
     "websiteURL": "https://bob.tools",
     "brandColor": "#FF7A1A",
     "composerIcon": "./assets/icon.png",

@@ -1,0 +1,36 @@
+{
+  "name": "bob-plugins",
+  "owner": {
+    "name": "BoB Tools",
+    "email": "support@bob.tools"
+  },
+  "metadata": {
+    "description": "BoB Tools — Apps for Business: your team's data apps, Telegram and currency rates for your AI"
+  },
+  "plugins": [
+    {
+      "name": "bob-tools",
+      "source": "plugins/bob-tools",
+      "description": "BoB Tools — Apps for Business. Build and run your team's apps from your AI: tables, records, dashboards, docs and share links.",
+      "logo": "https://raw.githubusercontent.com/bob-tools/bob-plugins/main/plugins/bob-tools/assets/logo.png",
+      "category": "Productivity",
+      "homepage": "https://bob.tools/mcp/"
+    },
+    {
+      "name": "bob-chat",
+      "source": "plugins/bob-chat",
+      "description": "Connect Telegram to your AI: read, search and answer your own chats through the BoB Chat phone app.",
+      "logo": "https://raw.githubusercontent.com/bob-tools/bob-plugins/main/plugins/bob-chat/assets/logo.png",
+      "category": "Communication",
+      "homepage": "https://chat.bob.tools/chat/connect/"
+    },
+    {
+      "name": "bob-currency",
+      "source": "plugins/bob-currency",
+      "description": "Currency Rates BoB — current and historical exchange rates for 140 currencies, major crypto included. No sign-in to start.",
+      "logo": "https://raw.githubusercontent.com/bob-tools/bob-plugins/main/plugins/bob-currency/assets/logo.png",
+      "category": "Finance",
+      "homepage": "https://rates.bob.tools/"
+    }
+  ]
+}

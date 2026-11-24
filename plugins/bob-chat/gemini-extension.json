@@ -1,0 +1,11 @@
+{
+  "name": "bob-chat",
+  "version": "1.2.1",
+  "description": "Connect Telegram to your AI: read, search and answer your own chats through the BoB Chat phone app.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "bob-chat": {
+      "httpUrl": "https://chat-mcp.bob.tools"
+    }
+  }
+}

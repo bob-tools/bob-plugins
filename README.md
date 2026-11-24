@@ -1,8 +1,8 @@
 # BoB Tools — Plugin Marketplace
 
-Plugin marketplace for [BoB Tools](https://bob.tools) — AI-powered forms, data management, currency rates, Telegram chats, and Android phone control.
+Plugin marketplace for [BoB Tools](https://bob.tools) — Apps for Business: your team's data apps, currency rates, Telegram chats and Android phone control.
 
-Works in both **Claude Code** (`.claude-plugin/marketplace.json`) and **Codex** (`.agents/plugins/marketplace.json`) from the same repo.
+Works in **Claude Code** (`.claude-plugin/marketplace.json`), **Codex** (`.agents/plugins/marketplace.json`), **Cursor** (`.cursor-plugin/marketplace.json`), **Antigravity** and other Agent Plugins clients (`plugins/*/plugin.json` + `mcp.json`) and **Gemini CLI** (`gemini-extension.json`) from the same repo.
 
 ## Quick Start (Claude Code)
 
@@ -46,11 +46,53 @@ codex plugin marketplace add bob-tools/bob-plugins
 
 Then install `bob-chat`, `bob-tools`, `bob-currency`, or `bob-control` from the list. All use HTTP transport with OAuth on first connection.
 
+## Quick Start (Antigravity)
+
+```bash
+git clone https://github.com/bob-tools/bob-plugins
+agy plugin install ./bob-plugins/plugins/bob-tools      # or bob-chat, bob-currency
+```
+
+Each plugin folder is an [Agent Plugin](https://agent-plugins.org) (`plugin.json` + `mcp.json`), so the
+same folders also work in Cursor (`.cursor-plugin/marketplace.json` lists them) and other Agent Plugins
+clients. Sign in when the client asks: open `/plugin`, expand the plugin and choose **Sign in**.
+
+## Quick Start (Gemini CLI)
+
+```bash
+# BoB Tools + Currency Rates BoB in one extension
+gemini extensions install https://github.com/bob-tools/bob-plugins
+
+# or one product at a time, from a local clone
+gemini extensions install ./bob-plugins/plugins/bob-chat
+```
+
+Then run `/mcp auth bob-tools` (or `bob-chat`) once to sign in. Currency Rates BoB works without sign-in.
+
+## Any other MCP client (VS Code, Cline, Windsurf, Zed …)
+
+Add a remote (Streamable HTTP) server with one of these URLs. The client opens the BoB sign-in page
+on first use (OAuth 2.1 with dynamic client registration):
+
+| Product | URL | Sign-in |
+|---|---|---|
+| BoB Tools — Apps for Business | `https://api.bob.tools/mcp` | BoB account |
+| BoB Chat — Connect Telegram to your AI | `https://chat-mcp.bob.tools` | BoB account + the BoB Chat phone app |
+| Currency Rates BoB | `https://mcp-currency.bob.tools` | not needed to start |
+
+VS Code `mcp.json`:
+
+```json
+{ "servers": { "bob-tools": { "type": "http", "url": "https://api.bob.tools/mcp" } } }
+```
+
+Step-by-step for AI agents installing this: [llms-install.md](llms-install.md).
+
 ## Available Plugins
 
 ### bob-tools
 
-Full BoB Tools integration — 70+ MCP tools for managing your data.
+BoB Tools — Apps for Business. Build and run your team's apps from your AI: tables, records, dashboards, docs and share links.
 
 | Category | Tools |
 |----------|-------|

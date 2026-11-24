@@ -1,0 +1,14 @@
+{
+  "name": "bob-tools",
+  "version": "1.0.0",
+  "description": "BoB Tools — Apps for Business. Your team's apps in Gemini: tables, records, dashboards, docs and share links, plus free exchange rates.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "bob-tools": {
+      "httpUrl": "https://api.bob.tools/mcp"
+    },
+    "bob-currency": {
+      "httpUrl": "https://mcp-currency.bob.tools"
+    }
+  }
+}

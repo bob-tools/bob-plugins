@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bob-currency",
+  "version": "1.0.2",
+  "description": "Currency Rates BoB — current and historical exchange rates for 140 currencies, major crypto included. No sign-in to start.",
+  "author": {
+    "name": "BoB Tools",
+    "email": "support@bob.tools"
+  },
+  "homepage": "https://rates.bob.tools/",
+  "repository": "https://github.com/bob-tools/bob-plugins",
+  "keywords": [
+    "currency",
+    "exchange-rates",
+    "finance",
+    "crypto"
+  ]
+}

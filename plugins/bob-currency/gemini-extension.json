@@ -1,0 +1,11 @@
+{
+  "name": "bob-currency",
+  "version": "1.0.2",
+  "description": "Currency Rates BoB — current and historical exchange rates for 140 currencies, major crypto included. No sign-in to start.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "bob-currency": {
+      "httpUrl": "https://mcp-currency.bob.tools"
+    }
+  }
+}
