@@ -3,7 +3,7 @@
   "mcpServers": {
     "bob-chat": {
       "type": "streamable-http",
-      "url": "https://api.bob.tools/mcp-chat-openai",
+      "url": "https://api.bob.tools/mcp-chat",
       "extensions": {
         "com.openai": {
           "auth": {
