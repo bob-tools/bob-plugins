@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Builds the ChatGPT plugin ZIP for upload at https://platform.openai.com/plugins
-# Usage: scripts/build-chatgpt-zip.sh [plugin]   (default: bob-tools) -> dist/<plugin>-chatgpt-<version>.zip
+# Usage: scripts/build-chatgpt-zip.sh [plugin]   (bob-tools by default, or bob-chat) -> dist/<plugin>-chatgpt-<version>.zip
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 NAME="${1:-bob-tools}"
