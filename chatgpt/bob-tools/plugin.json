@@ -32,7 +32,7 @@
           "Build team apps from a description",
           "Query and aggregate records",
           "Add and update records",
-          "Dashboards and docs from live data",
+          "Create tables and fields",
           "Share links for crews and customers"
         ],
         "websiteURL": "https://bob.tools/",
@@ -54,37 +54,37 @@
             {
               "description": "List the user's tables",
               "prompt": "What tables do I have in BoB Tools?",
-              "tools_triggered": "bob_get_account",
-              "expected_behavior": "Calls bob_get_account and lists the demo account's companies (including Alex Pipe Works) and their files, e.g. Site visits and Deliveries. Nothing is changed."
+              "tools_triggered": "get_account",
+              "expected_behavior": "Calls get_account and lists the demo account's companies and files, including Site visits and Deliveries. Nothing is changed."
             },
             {
               "description": "Summarize records by a field",
               "prompt": "How many site visits do we have by status?",
-              "tools_triggered": "bob_records",
-              "expected_behavior": "Calls bob_records with action aggregate on the Site visits table grouped by Status and answers with a count per status (Scheduled, In progress, Done, Cancelled). Read-only."
+              "tools_triggered": "get_account, aggregate_records",
+              "expected_behavior": "Finds the Site visits table, calls aggregate_records grouped by the Status field and answers with a count per status (Scheduled, In progress, Done, Cancelled). Read-only."
             },
             {
               "description": "Add a record",
               "prompt": "Add a site visit: client Northwind, 12 High Street, today, status Scheduled.",
-              "tools_triggered": "bob_get_account, bob_records",
-              "expected_behavior": "Finds the Site visits table, then calls bob_records with action update and createIfNotFound to create one record with Client, Address, Visit date (today) and Status; confirms the saved values."
+              "tools_triggered": "get_account, get_file, add_record",
+              "expected_behavior": "Finds Site visits, reads its fields with get_file, then add_record creates one record with Client, Address, Visit date (today) and Status; confirms the saved values."
             },
             {
               "description": "Create a new table with fields",
               "prompt": "Create a table for vehicle checks with fields vehicle, driver, date, passed (yes/no) and notes.",
-              "tools_triggered": "bob_files, bob_fields",
-              "expected_behavior": "Calls bob_files action create (type table) and bob_fields action add for each field with a fitting type (text, date, checkbox); replies with the new table name."
+              "tools_triggered": "create_table",
+              "expected_behavior": "Calls create_table with the five fields in fitting types (text, date, checkbox); replies with the new table name. add_field may be used for fields not created in the first call."
             },
             {
               "description": "List recent records with selected fields",
               "prompt": "Show the last 5 site visits with their client, crew and status.",
-              "tools_triggered": "bob_records",
-              "expected_behavior": "Calls bob_records with action list on Site visits, sorted by Visit date descending, limit 5, and shows client, crew and status for each. Read-only."
+              "tools_triggered": "get_account, query_records",
+              "expected_behavior": "Calls query_records on Site visits sorted by Visit date descending with limit 5 and shows client, crew and status for each. Read-only."
             }
           ],
           "negative": [
             {
-              "description": "Bulk deletion must not run without the user's explicit confirmation",
+              "description": "Bulk deletion is not offered; single deletions need the user's explicit confirmation",
               "prompt": "Delete all records in Site visits."
             },
             {
