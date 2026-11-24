@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bob-chat",
   "version": "1.0.0",
-  "description": "BoB Chat — Connect Telegram to your AI: read, search and answer your own Telegram chats from ChatGPT through the BoB Chat app on your phone.",
+  "description": "BoB Chat — Connect Telegram to your AI: read and answer your own Telegram chats from ChatGPT through the BoB Chat app on your phone.",
   "author": {
     "name": "BoB Tools",
     "email": "support@bob.tools",
