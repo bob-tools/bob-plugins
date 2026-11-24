@@ -24,13 +24,13 @@
       "interface": {
         "displayName": "BoB Chat",
         "shortDescription": "Connect Telegram to your AI",
-        "longDescription": "BoB Chat — Connect Telegram to your AI.\n\nAsk ChatGPT \"what did I miss in Telegram?\", \"find the message about the invoice\" or \"tell Max I'm on my way\". ChatGPT reads your unread chats, searches your conversations and, when you ask, sends a reply from your own Telegram account.\n\nIt works through the BoB Chat app on your own phone (Android or iPhone). You sign in to Telegram in the app; each request from ChatGPT is relayed to the app, which runs it on the phone and returns the result. In the app you choose what ChatGPT may do: read only or also send, and which kinds of chats it may see (private chats, groups, bots, channels).\n\nChatGPT acts only as you, only on your own linked accounts. Every message it sends is a separate action you approve. One-time login codes in messages are hidden before they reach ChatGPT.\n\nBoB Chat is an independent product of BoB Tools LLP, not affiliated with or endorsed by Telegram.",
+        "longDescription": "BoB Chat — Connect Telegram to your AI.\n\nAsk ChatGPT \"what did I miss in Telegram?\", \"show my last messages with Max\" or \"tell Max I'm on my way\". ChatGPT reads your unread chats, finds the right contact and, when you ask, sends a reply from your own Telegram account.\n\nIt works through the BoB Chat app on your own phone (Android or iPhone). You sign in to Telegram in the app; each request from ChatGPT is relayed to the app, which runs it on the phone and returns the result. In the app you choose what ChatGPT may do: read only or also send, and which kinds of chats it may see (private chats, groups, bots, channels).\n\nChatGPT acts only as you, only on your own linked accounts. Every message it sends is a separate action you approve. One-time login codes in messages are hidden before they reach ChatGPT.\n\nBoB Chat is an independent product of BoB Tools LLP, not affiliated with or endorsed by Telegram.",
         "developerName": "BoB Tools LLP",
         "category": "Productivity",
         "capabilities": [
           "Summarise unread Telegram chats",
           "Read messages from a chat",
-          "Search contacts and message history",
+          "Find a contact or a chat by name",
           "Send a message as you, after your approval",
           "Mark chats as read"
         ],
@@ -40,7 +40,7 @@
         "termsOfServiceURL": "https://chat.bob.tools/terms/",
         "defaultPrompt": [
           "What did I miss in Telegram today?",
-          "Find the Telegram message where someone mentioned the invoice",
+          "Show the last messages in my Telegram chat with Max",
           "Reply to Max on Telegram: on my way, see you at 3"
         ],
         "brandColor": "#FF7A1A",
