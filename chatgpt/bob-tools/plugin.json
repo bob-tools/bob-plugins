@@ -55,37 +55,37 @@
               "description": "List the user's tables",
               "prompt": "What tables do I have in BoB Tools?",
               "tools_triggered": "get_account",
-              "expected_behavior": "Calls get_account and lists the demo account's files, including Site visits and Deliveries. Nothing is changed."
+              "expected_behavior": "Calls get_account and lists the account's files, including the Expenses table in the personal space. Nothing is changed."
             },
             {
-              "description": "Summarize records by a field",
-              "prompt": "How many site visits do we have by status?",
-              "tools_triggered": "get_account, aggregate_records",
-              "expected_behavior": "Finds the Site visits table, calls aggregate_records grouped by the Status field and answers with a count per status (Scheduled, In progress, Done, Cancelled). Read-only."
-            },
-            {
-              "description": "Add a record",
-              "prompt": "Add a site visit: client Northwind, 12 High Street, today, status Scheduled.",
-              "tools_triggered": "get_account, get_file, add_record",
-              "expected_behavior": "Finds Site visits, reads its fields with get_file, then add_record creates one record with Client, Address, Visit date (today) and Status; confirms the saved values."
-            },
-            {
-              "description": "Create a new table with fields",
-              "prompt": "Create a table for vehicle checks with fields vehicle, driver, date, passed (yes/no) and notes.",
+              "description": "Create a new table from a plain description",
+              "prompt": "In my personal space, create a table \"Reading list\" to track books: title, author, date finished, rating from 1 to 5, and a note.",
               "tools_triggered": "create_table",
-              "expected_behavior": "Calls create_table with the five fields in fitting types (text, date, checkbox); replies with the new table name. add_field may be used for fields not created in the first call."
+              "expected_behavior": "Calls create_table with title Reading list and five fields in fitting types (text, date, number or single select for the rating); replies with the new table and its fields. add_field may be used for fields not created in the first call. Works on an empty account."
+            },
+            {
+              "description": "Add a record with a decimal amount",
+              "prompt": "Add an expense for today: 12.75, Groceries, paid by card, note \"milk and bread\".",
+              "tools_triggered": "get_account, get_file, add_record",
+              "expected_behavior": "Finds Expenses, reads its fields with get_file, then add_record creates one record with Date (today), Amount 12.75, Category Groceries, How I paid Card and the note; confirms the saved values, with the amount kept as 12.75."
+            },
+            {
+              "description": "Total and per-category summary",
+              "prompt": "How much have I spent in total in Expenses, and how much by category?",
+              "tools_triggered": "get_account, aggregate_records",
+              "expected_behavior": "Calls aggregate_records on Expenses with a sum of Amount, once in total and once grouped by Category. On the prepared data the total is 63.70: Groceries 42.50, Eating out 18.00, Transport 3.20; records the reviewer added earlier (for example 12.75 Groceries from the previous test) are included in the sums. Read-only."
             },
             {
               "description": "List recent records with selected fields",
-              "prompt": "Show the last 5 site visits with their client, crew and status.",
+              "prompt": "Show my 3 most recent expenses with their date, amount and category.",
               "tools_triggered": "get_account, query_records",
-              "expected_behavior": "Calls query_records on Site visits sorted by Visit date descending with limit 5 and shows client, crew and status for each. Read-only."
+              "expected_behavior": "Calls query_records on Expenses sorted by Date descending with limit 3 and shows date, amount and category for each. Read-only."
             }
           ],
           "negative": [
             {
-              "description": "Bulk deletion is not offered; single deletions need the user's explicit confirmation",
-              "prompt": "Delete all records in Site visits."
+              "description": "There is no bulk delete: each deletion is a separate delete_record call that ChatGPT asks the user to approve, and nothing is deleted without approval",
+              "prompt": "Delete all records in Expenses."
             },
             {
               "description": "Another organisation's data is not accessible",
