@@ -1,6 +1,6 @@
 # BoB Tools — Plugin Marketplace
 
-Plugin marketplace for [BoB Tools](https://bob.tools) — Apps for Business: your team's data apps, currency rates, Telegram chats and Android phone control.
+Plugin marketplace for [BoB Tools](https://bob.tools) — Apps for Business: your team's data apps, currency rates and Telegram chats.
 
 Works in **Claude Code** (`.claude-plugin/marketplace.json`), **Codex** (`.agents/plugins/marketplace.json`), **Cursor** (`.cursor-plugin/marketplace.json`), **Antigravity** and other Agent Plugins clients (`plugins/*/plugin.json` + `mcp.json`) and **Gemini CLI** (`gemini-extension.json`) from the same repo.
 
@@ -23,9 +23,6 @@ Works in **Claude Code** (`.claude-plugin/marketplace.json`), **Codex** (`.agent
 
 # Remote Telegram control via your phone
 /plugin install bob-chat@bob-plugins
-
-# Remote Android phone control via your phone
-/plugin install bob-control@bob-plugins
 ```
 
 ## Quick Start (Codex)
@@ -44,7 +41,7 @@ Or via CLI:
 codex plugin marketplace add bob-tools/bob-plugins
 ```
 
-Then install `bob-chat`, `bob-tools`, `bob-currency`, or `bob-control` from the list. All use HTTP transport with OAuth on first connection.
+Then install `bob-chat`, `bob-tools` or `bob-currency` from the list. All use HTTP transport with OAuth on first connection.
 
 ## Quick Start (Antigravity)
 
@@ -145,30 +142,6 @@ Remote Telegram control via cloud relay (FCM) — the commands run on your phone
 
 **Quota:** the free plan includes 30 remote requests a day; BoB Chat Pro / BoB Max are unlimited.
 
-### bob-control
-
-Remote Android phone control via cloud relay (FCM) — commands run on your phone through the BoB Control app, nothing is executed server-side.
-
-| Tool | Description |
-|------|-------------|
-| `phone_list_devices` | List linked Android devices |
-| `phone_generate_pairing_code` | Generate a 6-digit code to link a new device |
-| `phone_screen` | Read the screen — active app + UI tree, optional JPEG screenshot |
-| `phone_tap` / `phone_tap_text` | Tap by coordinates, or by on-screen text/description |
-| `phone_swipe` | Swipe from one point to another |
-| `phone_type` | Type into the focused input |
-| `phone_press_back` / `phone_press_home` / `phone_press_recents` | Hardware navigation buttons |
-| `phone_get_apps` / `phone_open_app` | List installed apps and open one by package |
-| `phone_get_notifications` | List active notifications |
-| `phone_open_notification` / `phone_dismiss_notification` / `phone_dismiss_all_notifications` | Manage notifications |
-| `phone_unlock_device` | Release the device lock |
-| `phone_enable_adb` / `phone_disable_adb` | Toggle the on-device ADB server |
-| `phone_check_command` | Check the result of an async control command |
-
-**Auth:** OAuth. Requires the [BoB Control](https://bob.tools) Android app installed and running on the target device.
-
-**Quota:** the free plan includes 250 MCP calls a day, then $1 per 10,000 calls from your balance; BoB Pro / Max are unlimited.
-
 ## Alternative: Direct MCP Setup
 
 If you prefer adding MCP servers without the plugin system:
@@ -182,9 +155,6 @@ claude mcp add --transport http bob-currency https://mcp-currency.bob.tools
 
 # Telegram Control
 claude mcp add --transport http bob-chat https://chat-mcp.bob.tools
-
-# Android Phone Control
-claude mcp add --transport http bob-control https://api.bob.tools/mcp-control
 ```
 
 ## Claude Desktop bundle (`.mcpb`)

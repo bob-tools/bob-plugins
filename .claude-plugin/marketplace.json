@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "bob-plugins",
-  "description": "Official plugins for BoB Tools — Apps for Business: your team's data apps, currency rates, Telegram and Android control",
+  "description": "Official plugins for BoB Tools — Apps for Business: your team's data apps, Telegram chats and currency rates",
   "owner": {
     "name": "BoB Tools",
     "email": "support@bob.tools"
@@ -68,26 +68,6 @@
         "productivity",
         "remote",
         "messages"
-      ]
-    },
-    {
-      "name": "bob-control",
-      "description": "Remote Android phone control via cloud relay — screenshots, UI tree, tap, swipe, type, app management, notifications. Runs on your phone; requires the BoB Control Android app.",
-      "category": "automation",
-      "version": "1.2.7",
-      "author": {
-        "name": "BoB Tools",
-        "email": "support@bob.tools"
-      },
-      "source": "./plugins/bob-control",
-      "homepage": "https://bob.tools",
-      "keywords": [
-        "phone",
-        "android",
-        "remote",
-        "control",
-        "automation",
-        "testing"
       ]
     }
   ]
