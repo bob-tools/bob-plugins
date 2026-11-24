@@ -1,0 +1,109 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bob-tools",
+  "version": "1.0.0",
+  "description": "BoB Tools — Apps for Business: your team's tables, records, dashboards and app screens in ChatGPT.",
+  "author": {
+    "name": "BoB Tools",
+    "email": "support@bob.tools",
+    "url": "https://bob.tools/"
+  },
+  "homepage": "https://bob.tools/mcp/",
+  "repository": "https://github.com/bob-tools/bob-plugins",
+  "license": "Proprietary",
+  "keywords": [
+    "business apps",
+    "no-code",
+    "database",
+    "dashboards",
+    "crm",
+    "field teams",
+    "offline"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "BoB Tools",
+        "shortDescription": "Apps for Business",
+        "longDescription": "BoB Tools — Apps for Business. Get an app your team installs. Works offline. From $1 a seat. No developer.\n\nConnect your BoB Tools workspace and run your team's business apps from ChatGPT. Describe what your team tracks (site visits, orders, inspections, deliveries) and ChatGPT builds the app: a table with the right fields, screens your crew uses on their phones, a dashboard for the office and a share link for customers.\n\nOnce there is data, ask in plain language: how many jobs closed last week by crew, which deliveries are late, what changed today. ChatGPT sees exactly what your BoB Tools account sees and asks before it changes or deletes anything.",
+        "developerName": "BoB Tools LLP",
+        "category": "Business & Operations",
+        "capabilities": [
+          "Build team apps from a description",
+          "Query and aggregate records",
+          "Add and update records",
+          "Dashboards and docs from live data",
+          "Share links for crews and customers"
+        ],
+        "websiteURL": "https://bob.tools/",
+        "supportURL": "https://bob.tools/mcp/",
+        "privacyPolicyURL": "https://bob.tools/pp",
+        "termsOfServiceURL": "https://bob.tools/terms/",
+        "defaultPrompt": [
+          "What do I have in BoB Tools?",
+          "Build an app for our site visits: client, address, date, status, photos",
+          "How many orders came in last week, by status?"
+        ],
+        "brandColor": "#FF6B00",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "See what is in my workspace",
+              "prompt": "What do I have in BoB Tools?",
+              "tools_triggered": "bob_get_account",
+              "expected_behavior": "Lists the user's companies and files (tables, docs, apps) with their names; no changes are made."
+            },
+            {
+              "description": "Build a new app for the team",
+              "prompt": "Build an app for our site visits: client, address, visit date, status and photos.",
+              "tools_triggered": "bob_files, bob_fields, bob_app",
+              "expected_behavior": "Creates a table with the requested fields (date, select for status, photo field) and app screens; replies with the new file name and a link to open it."
+            },
+            {
+              "description": "Add a record",
+              "prompt": "Add a site visit: client Northwind, 12 High Street, today, status Scheduled.",
+              "tools_triggered": "bob_records",
+              "expected_behavior": "Creates one record in the site-visits table with the given values and confirms what was saved."
+            },
+            {
+              "description": "Query and aggregate records",
+              "prompt": "How many site visits do we have by status?",
+              "tools_triggered": "bob_records",
+              "expected_behavior": "Returns counts grouped by the status field from the user's table; read-only."
+            },
+            {
+              "description": "Share with the crew",
+              "prompt": "Give me a link my crew can open on their phones to add site visits.",
+              "tools_triggered": "bob_shares",
+              "expected_behavior": "Creates a share link for the table (after confirming) and returns the URL."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Payments are out of scope",
+              "prompt": "Transfer $100 to my supplier."
+            },
+            {
+              "description": "General knowledge, no workspace data needed",
+              "prompt": "What is the capital of Australia?"
+            },
+            {
+              "description": "Other products' data",
+              "prompt": "Read my latest Gmail messages."
+            }
+          ]
+        },
+        "demo_recording_url": "TODO: video URL (unlisted YouTube or Drive link)",
+        "commerce": false,
+        "commerce_description": "The plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Initial release."
+      }
+    }
+  }
+}
