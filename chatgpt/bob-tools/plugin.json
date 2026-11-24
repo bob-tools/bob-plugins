@@ -55,13 +55,13 @@
               "description": "List the user's tables",
               "prompt": "What tables do I have in BoB Tools?",
               "tools_triggered": "bob_get_account",
-              "expected_behavior": "Calls bob_get_account and lists the demo account's companies and files (Site visits, Orders) with their record counts. Nothing is changed."
+              "expected_behavior": "Calls bob_get_account and lists the demo account's companies (including Alex Pipe Works) and their files, e.g. Site visits and Deliveries. Nothing is changed."
             },
             {
               "description": "Summarize records by a field",
               "prompt": "How many site visits do we have by status?",
               "tools_triggered": "bob_records",
-              "expected_behavior": "Calls bob_records with action aggregate on the Site visits table, grouped by Status, and answers with a count per status (Scheduled, In progress, Done, Cancelled). Read-only."
+              "expected_behavior": "Calls bob_records with action aggregate on the Site visits table grouped by Status and answers with a count per status (Scheduled, In progress, Done, Cancelled). Read-only."
             },
             {
               "description": "Add a record",
@@ -76,10 +76,10 @@
               "expected_behavior": "Calls bob_files action create (type table) and bob_fields action add for each field with a fitting type (text, date, checkbox); replies with the new table name."
             },
             {
-              "description": "Build an app on top of a table",
-              "prompt": "Build an app for our site visits so the crew can add visits on their phones.",
-              "tools_triggered": "bob_app",
-              "expected_behavior": "Calls bob_app (outline, then build) for the Site visits table; reports that the build started and, when bob_app build_status returns done, gives the link to open the app."
+              "description": "List recent records with selected fields",
+              "prompt": "Show the last 5 site visits with their client, crew and status.",
+              "tools_triggered": "bob_records",
+              "expected_behavior": "Calls bob_records with action list on Site visits, sorted by Visit date descending, limit 5, and shows client, crew and status for each. Read-only."
             }
           ],
           "negative": [
